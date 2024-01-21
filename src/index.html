@@ -4,12 +4,18 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Yalda Khoshbahar"/>
+    <meta name="keywords" content="game,console,ps5,xbox,unreal-engine,unity,cryengine,gameplay"/>
+    <meta name="description" content="you can download many games."/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-    <meta name="keywords" content="game,console,ps5,xbox,unreal-engine,unity,cryengine,gameplay"/>
-    <meta name="description" content="you can download many games."/>
-    <meta name="author" content="Yalda Khoshbahar"/>
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="./../node_modules/@glidejs/glide/dist/css/glide.core.min.css"/>
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="./../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"/>
+    <script src="./../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/output.css"/>
     <title>Game Platform</title>
   </head>
@@ -25,7 +31,12 @@
           <img src="./images/hamburger.svg" alt="hamburgur menu icon"/>
         </button>
 
-        <div class="lg:flex hidden flex-row gap-[52px] items-center">
+        <div id="myMenu" class="duration-1000 ease-in-out lg:bg-transparent bg-stone-800 lg:static fixed lg:px-0 lg:py-0 px-8 py-4 -right-full top-0 bottom-0 z-50">
+          <button type="button" id="btnClose" class="lg:hidden block mb-10">
+            <img src="./images/X.svg" alt="X icon"/>
+          </button>
+
+        <div class="flex lg:flex-row flex-col gap-[52px] items-center relative z-20">
           <a href="#" class="inline-block text-base px-3 py-2 border-transparent border-b-2 hover:border-primary hover:text-primary duration-500">
             Home
           </a>
@@ -42,6 +53,7 @@
             Contact us
           </a>
         </div>
+      </div>
       </div>
     </nav>
     </header>
@@ -101,36 +113,95 @@
         </a>
       </div>
 
-      <div class="md:flex justify-center gap-10 mt-12 sm:grid sm:grid-cols-2 sm:grid-rows-2">
-        <a href="#" class="flex flex-col justify-center items-center group">
-            <img src="./images/Rectangle 1.png" alt="image 1" class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48">
-            <div class="flex gap-2 justify-center mt-4">
-                <img src="./images/fire.png" alt="fire icon">
-                <p class="text-lg font-medium text-white group-hover:text-primary duration-200">40 Followers</p>
-            </div>
-        </a>
-        <a href="#" class="flex flex-col justify-center items-center group sm:my-0 my-9">
-            <img src="./images/Rectangle 2.png" alt="image 2" class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48">
-            <div class="flex gap-2 justify-center mt-4">
-                <img src="./images/fire.png" alt="fire icon">
-                <p class="text-lg font-medium text-white group-hover:text-primary duration-200">40 Followers</p>
-            </div>
-        </a>
-        <a href="#" class="flex flex-col justify-center items-center group">
-            <img src="./images/Rectangle 3.png" alt="image 3" class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48">
-            <div class="flex gap-2 justify-center mt-4">
-                <img src="./images/fire.png" alt="fire icon">
-                <p class="text-lg font-medium text-white group-hover:text-primary duration-200">40 Followers</p>
-            </div>
-        </a>
-        <a href="#" class="flex flex-col justify-center items-center group sm:mt-0 mt-9">
-            <img src="./images/Rectangle 4.png" alt="image 4" class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48">
-            <div class="flex gap-2 justify-center mt-4">
-                <img src="./images/fire.png" alt="fire icon">
-                <p class="text-lg font-medium text-white group-hover:text-primary duration-200">40 Followers</p>
-            </div>
-        </a>
-    </div>
+      <div class="glide overflow-visible">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides pt-3">
+            <li class="glide__slide">
+              <a href="#" class="flex flex-col justify-center items-center group">
+                <img
+                  class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48"
+                  src="./images/Rectangle 1.png"
+                  alt="image 1"
+                />
+                <div class="flex gap-2 justify-center mt-4">
+                  <img src="./images/fire.png" alt="fire icon" />
+                  <p class="text-lg font-medium text-white group-hover:text-primary duration-200">
+                    40 Followers
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="glide__slide">
+              <a href="#" class="flex flex-col justify-center items-center group">
+                <img
+                  class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48"
+                  src="./images/Rectangle 2.png"
+                  alt="image 2"
+                />
+                <div class="flex gap-2 justify-center mt-4">
+                  <img src="./images/fire.png" alt="fire icon"/>
+                  <p class="text-lg font-medium text-white group-hover:text-primary duration-200">
+                    40 Followers
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="glide__slide">
+              <a href="#" class="flex flex-col justify-center items-center group">
+                <img
+                  class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48"
+                  src="./images/Rectangle 3.png"
+                  alt="image 3"
+                />
+                <div class="flex gap-2 justify-center mt-4">
+                  <img src="./images/fire.png" alt="fire icon"/>
+                  <p class="text-lg font-medium text-white group-hover:text-primary duration-200">
+                    40 Followers
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="glide__slide">
+              <a href="#" class="flex flex-col justify-center items-center group">
+                <img
+                  class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48"
+                  src="./images/Rectangle 4.png"
+                  alt="image 4"
+                />
+                <div class="flex gap-2 justify-center mt-4">
+                  <img src="./images/fire.png" alt="fire icon"/>
+                  <p class="text-lg font-medium text-white group-hover:text-primary duration-200">
+                    40 Followers
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="glide__slide">
+              <a href="#" class="flex flex-col justify-center items-center group">
+                <img
+                  class="hover:scale-105 duration-700 md:w-full sm:w-52 w-48"
+                  src="./images/Rectangle 3.png"
+                  alt="image 3"
+                />
+                <div class="flex gap-2 justify-center mt-4">
+                  <img src="./images/fire.png" alt="fire icon" />
+                  <p class="text-lg font-medium text-white group-hover:text-primary duration-200">
+                    40 Followers
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left bg-[#ffffffd0] rounded-full px-1 py-1" data-glide-dir="<">
+            <img src="./images/arrow-left.svg" alt="left arrow"/>
+          </button>
+          <button class="glide__arrow glide__arrow--right bg-[#ffffffd0] rounded-full px-1 py-1" data-glide-dir=">">
+            <img src="./images/arrow-right.svg" alt="right arrow"/>
+          </button>
+        </div>
+      </div>
     </section>
 
     <section class="container sm:mt-28 mt-36">
