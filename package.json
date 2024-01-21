@@ -1,0 +1,18 @@
+{
+  "name": "game-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Yalda Khoshbahar",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0"
+  }
+}

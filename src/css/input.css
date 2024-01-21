@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: rgb(231, 231, 231);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FA9021;
+    border-radius: 8px;
+}
+
+/* slider image */
+#owl-demo .item {
+    margin: 3px;
+}
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
